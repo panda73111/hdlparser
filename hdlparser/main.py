@@ -84,7 +84,9 @@ class RebuildingVhdlListener(VhdlListener):
 def main():
     logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
 
-    file_stream = FileStream(r"D:\Eigene Dateien\git\pandaLight-HDL\LED_CONTROL\LED_CONTROL.vhd")
+    file_stream = FileStream(
+        r"D:\Eigene Dateien\git\pandaLight-HDL"
+        r"\pandaLight-tests\complete LED test\PANDA_LIGHT.vhd")
 
     lexer = VhdlLexer(file_stream)
     token_stream = CommonTokenStream(lexer)
@@ -96,7 +98,7 @@ def main():
     walker = ParseTreeWalker()
     walker.walk(listener, tree)
 
-    pass
+    print(listener.document.tree_string())
 
 
 if __name__ == "__main__":

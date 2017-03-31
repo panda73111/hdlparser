@@ -1,5 +1,7 @@
 from enum import Enum
 
+from model.HdlElement import HdlElement
+
 
 class PortDirection(Enum):
     IN = 0
@@ -7,13 +9,13 @@ class PortDirection(Enum):
     INOUT = 2
 
 
-class Port:
+class Port(HdlElement):
     def __init__(self, direction, interface):
         self.direction = direction
         self.interface = interface
 
     def __str__(self):
         return (
-            "[Port "
-            "direction={s.direction} "
-            "interface={s.interface}]".format(s=self))
+            "<Port "
+            "direction={0.direction} "
+            "interface={0.interface}>".format(self))

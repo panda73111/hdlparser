@@ -1,3 +1,5 @@
+from model.HdlElement import HdlElement
 
-class Architecture:
+
+class Architecture(HdlElement):
     pass

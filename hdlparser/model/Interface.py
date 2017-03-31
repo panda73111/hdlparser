@@ -1,5 +1,7 @@
+from model.HdlElement import HdlElement
 
-class Interface:
+
+class Interface(HdlElement):
     def __init__(self, name, data_type, value=None):
         self.name = name
         self.data_type = data_type
@@ -7,7 +9,7 @@ class Interface:
 
     def __str__(self):
         return (
-            "[Interface "
-            "name={s.name} "
-            "data_type={s.data_type} "
-            "value={s.value}]".format(s=self))
+            "<Interface "
+            "name={0.name} "
+            "data_type={0.data_type} "
+            "value={0.value}>".format(self))
