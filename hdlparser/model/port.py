@@ -1,6 +1,6 @@
 from enum import Enum
 
-from model.HdlElement import HdlElement
+from model.hdl_element import HdlElement
 
 
 class PortDirection(Enum):

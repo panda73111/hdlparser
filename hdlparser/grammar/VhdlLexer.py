@@ -1,6 +1,7 @@
 # Generated from Vhdl.g4 by ANTLR 4.6
-from antlr4 import *
 from io import StringIO
+
+from antlr4 import *
 
 
 def serializedATN():
@@ -697,11 +698,9 @@ def serializedATN():
 
 
 class VhdlLexer(Lexer):
-
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
-
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     ABS = 1
     ACCESS = 2
@@ -866,73 +865,73 @@ class VhdlLexer(Lexer):
     EXTENDED_DIGIT = 161
     APOSTROPHE = 162
 
-    modeNames = [ "DEFAULT_MODE" ]
+    modeNames = ["DEFAULT_MODE"]
 
-    literalNames = [ "<INVALID>",
-            "'\n'", "'\r'", "'**'", "'=='", "'<='", "'>='", "'=>'", "'/='", 
-            "':='", "'<>'", "'\"'", "';'", "','", "'&'", "'('", "')'", "'['", 
-            "']'", "':'", "'*'", "'/'", "'+'", "'-'", "'<'", "'>'", "'='", 
-            "'|'", "'.'", "'\\'", "'''" ]
+    literalNames = ["<INVALID>",
+                    "'\n'", "'\r'", "'**'", "'=='", "'<='", "'>='", "'=>'", "'/='",
+                    "':='", "'<>'", "'\"'", "';'", "','", "'&'", "'('", "')'", "'['",
+                    "']'", "':'", "'*'", "'/'", "'+'", "'-'", "'<'", "'>'", "'='",
+                    "'|'", "'.'", "'\\'", "'''"]
 
-    symbolicNames = [ "<INVALID>",
-            "ABS", "ACCESS", "ACROSS", "AFTER", "ALIAS", "ALL", "AND", "ARCHITECTURE", 
-            "ARRAY", "ASSERT", "ATTRIBUTE", "BEGIN", "BLOCK", "BODY", "BREAK", 
-            "BUFFER", "BUS", "CASE", "COMPONENT", "CONFIGURATION", "CONSTANT", 
-            "DISCONNECT", "DOWNTO", "END", "ENTITY", "ELSE", "ELSIF", "EXIT", 
-            "FILE", "FOR", "FUNCTION", "GENERATE", "GENERIC", "GROUP", "GUARDED", 
-            "IF", "IMPURE", "IN", "INERTIAL", "INOUT", "IS", "LABEL", "LIBRARY", 
-            "LIMIT", "LINKAGE", "LITERAL", "LOOP", "MAP", "MOD", "NAND", 
-            "NATURE", "NEW", "NEXT", "NOISE", "NOR", "NOT", "NULL", "OF", 
-            "ON", "OPEN", "OR", "OTHERS", "OUT", "PACKAGE", "PORT", "POSTPONED", 
-            "PROCESS", "PROCEDURE", "PROCEDURAL", "PURE", "QUANTITY", "RANGE", 
-            "REVERSE_RANGE", "REJECT", "REM", "RECORD", "REFERENCE", "REGISTER", 
-            "REPORT", "RETURN", "ROL", "ROR", "SELECT", "SEVERITY", "SHARED", 
-            "SIGNAL", "SLA", "SLL", "SPECTRUM", "SRA", "SRL", "SUBNATURE", 
-            "SUBTYPE", "TERMINAL", "THEN", "THROUGH", "TO", "TOLERANCE", 
-            "TRANSPORT", "TYPE", "UNAFFECTED", "UNITS", "UNTIL", "USE", 
-            "VARIABLE", "WAIT", "WITH", "WHEN", "WHILE", "XNOR", "XOR", 
-            "BASE_LITERAL", "BIT_STRING_LITERAL", "BIT_STRING_LITERAL_BINARY", 
-            "BIT_STRING_LITERAL_OCTAL", "BIT_STRING_LITERAL_HEX", "REAL_LITERAL", 
-            "BASIC_IDENTIFIER", "EXTENDED_IDENTIFIER", "LETTER", "COMMENT", 
-            "TAB", "SPACE", "NEWLINE", "CR", "CHARACTER_LITERAL", "STRING_LITERAL", 
-            "OTHER_SPECIAL_CHARACTER", "DOUBLESTAR", "ASSIGN", "LE", "GE", 
-            "ARROW", "NEQ", "VARASGN", "BOX", "DBLQUOTE", "SEMI", "COMMA", 
-            "AMPERSAND", "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", "COLON", 
-            "MUL", "DIV", "PLUS", "MINUS", "LOWERTHAN", "GREATERTHAN", "EQ", 
-            "BAR", "DOT", "BACKSLASH", "EXPONENT", "HEXDIGIT", "INTEGER", 
-            "DIGIT", "BASED_INTEGER", "EXTENDED_DIGIT", "APOSTROPHE" ]
+    symbolicNames = ["<INVALID>",
+                     "ABS", "ACCESS", "ACROSS", "AFTER", "ALIAS", "ALL", "AND", "ARCHITECTURE",
+                     "ARRAY", "ASSERT", "ATTRIBUTE", "BEGIN", "BLOCK", "BODY", "BREAK",
+                     "BUFFER", "BUS", "CASE", "COMPONENT", "CONFIGURATION", "CONSTANT",
+                     "DISCONNECT", "DOWNTO", "END", "ENTITY", "ELSE", "ELSIF", "EXIT",
+                     "FILE", "FOR", "FUNCTION", "GENERATE", "GENERIC", "GROUP", "GUARDED",
+                     "IF", "IMPURE", "IN", "INERTIAL", "INOUT", "IS", "LABEL", "LIBRARY",
+                     "LIMIT", "LINKAGE", "LITERAL", "LOOP", "MAP", "MOD", "NAND",
+                     "NATURE", "NEW", "NEXT", "NOISE", "NOR", "NOT", "NULL", "OF",
+                     "ON", "OPEN", "OR", "OTHERS", "OUT", "PACKAGE", "PORT", "POSTPONED",
+                     "PROCESS", "PROCEDURE", "PROCEDURAL", "PURE", "QUANTITY", "RANGE",
+                     "REVERSE_RANGE", "REJECT", "REM", "RECORD", "REFERENCE", "REGISTER",
+                     "REPORT", "RETURN", "ROL", "ROR", "SELECT", "SEVERITY", "SHARED",
+                     "SIGNAL", "SLA", "SLL", "SPECTRUM", "SRA", "SRL", "SUBNATURE",
+                     "SUBTYPE", "TERMINAL", "THEN", "THROUGH", "TO", "TOLERANCE",
+                     "TRANSPORT", "TYPE", "UNAFFECTED", "UNITS", "UNTIL", "USE",
+                     "VARIABLE", "WAIT", "WITH", "WHEN", "WHILE", "XNOR", "XOR",
+                     "BASE_LITERAL", "BIT_STRING_LITERAL", "BIT_STRING_LITERAL_BINARY",
+                     "BIT_STRING_LITERAL_OCTAL", "BIT_STRING_LITERAL_HEX", "REAL_LITERAL",
+                     "BASIC_IDENTIFIER", "EXTENDED_IDENTIFIER", "LETTER", "COMMENT",
+                     "TAB", "SPACE", "NEWLINE", "CR", "CHARACTER_LITERAL", "STRING_LITERAL",
+                     "OTHER_SPECIAL_CHARACTER", "DOUBLESTAR", "ASSIGN", "LE", "GE",
+                     "ARROW", "NEQ", "VARASGN", "BOX", "DBLQUOTE", "SEMI", "COMMA",
+                     "AMPERSAND", "LPAREN", "RPAREN", "LBRACKET", "RBRACKET", "COLON",
+                     "MUL", "DIV", "PLUS", "MINUS", "LOWERTHAN", "GREATERTHAN", "EQ",
+                     "BAR", "DOT", "BACKSLASH", "EXPONENT", "HEXDIGIT", "INTEGER",
+                     "DIGIT", "BASED_INTEGER", "EXTENDED_DIGIT", "APOSTROPHE"]
 
-    ruleNames = [ "ABS", "ACCESS", "ACROSS", "AFTER", "ALIAS", "ALL", "AND", 
-                  "ARCHITECTURE", "ARRAY", "ASSERT", "ATTRIBUTE", "BEGIN", 
-                  "BLOCK", "BODY", "BREAK", "BUFFER", "BUS", "CASE", "COMPONENT", 
-                  "CONFIGURATION", "CONSTANT", "DISCONNECT", "DOWNTO", "END", 
-                  "ENTITY", "ELSE", "ELSIF", "EXIT", "FILE", "FOR", "FUNCTION", 
-                  "GENERATE", "GENERIC", "GROUP", "GUARDED", "IF", "IMPURE", 
-                  "IN", "INERTIAL", "INOUT", "IS", "LABEL", "LIBRARY", "LIMIT", 
-                  "LINKAGE", "LITERAL", "LOOP", "MAP", "MOD", "NAND", "NATURE", 
-                  "NEW", "NEXT", "NOISE", "NOR", "NOT", "NULL", "OF", "ON", 
-                  "OPEN", "OR", "OTHERS", "OUT", "PACKAGE", "PORT", "POSTPONED", 
-                  "PROCESS", "PROCEDURE", "PROCEDURAL", "PURE", "QUANTITY", 
-                  "RANGE", "REVERSE_RANGE", "REJECT", "REM", "RECORD", "REFERENCE", 
-                  "REGISTER", "REPORT", "RETURN", "ROL", "ROR", "SELECT", 
-                  "SEVERITY", "SHARED", "SIGNAL", "SLA", "SLL", "SPECTRUM", 
-                  "SRA", "SRL", "SUBNATURE", "SUBTYPE", "TERMINAL", "THEN", 
-                  "THROUGH", "TO", "TOLERANCE", "TRANSPORT", "TYPE", "UNAFFECTED", 
-                  "UNITS", "UNTIL", "USE", "VARIABLE", "WAIT", "WITH", "WHEN", 
-                  "WHILE", "XNOR", "XOR", "A", "B", "C", "D", "E", "F", 
-                  "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", 
-                  "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "BASE_LITERAL", 
-                  "BIT_STRING_LITERAL", "BIT_STRING_LITERAL_BINARY", "BIT_STRING_LITERAL_OCTAL", 
-                  "BIT_STRING_LITERAL_HEX", "REAL_LITERAL", "BASIC_IDENTIFIER", 
-                  "EXTENDED_IDENTIFIER", "LETTER", "COMMENT", "TAB", "SPACE", 
-                  "NEWLINE", "CR", "CHARACTER_LITERAL", "STRING_LITERAL", 
-                  "OTHER_SPECIAL_CHARACTER", "DOUBLESTAR", "ASSIGN", "LE", 
-                  "GE", "ARROW", "NEQ", "VARASGN", "BOX", "DBLQUOTE", "SEMI", 
-                  "COMMA", "AMPERSAND", "LPAREN", "RPAREN", "LBRACKET", 
-                  "RBRACKET", "COLON", "MUL", "DIV", "PLUS", "MINUS", "LOWERTHAN", 
-                  "GREATERTHAN", "EQ", "BAR", "DOT", "BACKSLASH", "EXPONENT", 
-                  "HEXDIGIT", "INTEGER", "DIGIT", "BASED_INTEGER", "EXTENDED_DIGIT", 
-                  "APOSTROPHE" ]
+    ruleNames = ["ABS", "ACCESS", "ACROSS", "AFTER", "ALIAS", "ALL", "AND",
+                 "ARCHITECTURE", "ARRAY", "ASSERT", "ATTRIBUTE", "BEGIN",
+                 "BLOCK", "BODY", "BREAK", "BUFFER", "BUS", "CASE", "COMPONENT",
+                 "CONFIGURATION", "CONSTANT", "DISCONNECT", "DOWNTO", "END",
+                 "ENTITY", "ELSE", "ELSIF", "EXIT", "FILE", "FOR", "FUNCTION",
+                 "GENERATE", "GENERIC", "GROUP", "GUARDED", "IF", "IMPURE",
+                 "IN", "INERTIAL", "INOUT", "IS", "LABEL", "LIBRARY", "LIMIT",
+                 "LINKAGE", "LITERAL", "LOOP", "MAP", "MOD", "NAND", "NATURE",
+                 "NEW", "NEXT", "NOISE", "NOR", "NOT", "NULL", "OF", "ON",
+                 "OPEN", "OR", "OTHERS", "OUT", "PACKAGE", "PORT", "POSTPONED",
+                 "PROCESS", "PROCEDURE", "PROCEDURAL", "PURE", "QUANTITY",
+                 "RANGE", "REVERSE_RANGE", "REJECT", "REM", "RECORD", "REFERENCE",
+                 "REGISTER", "REPORT", "RETURN", "ROL", "ROR", "SELECT",
+                 "SEVERITY", "SHARED", "SIGNAL", "SLA", "SLL", "SPECTRUM",
+                 "SRA", "SRL", "SUBNATURE", "SUBTYPE", "TERMINAL", "THEN",
+                 "THROUGH", "TO", "TOLERANCE", "TRANSPORT", "TYPE", "UNAFFECTED",
+                 "UNITS", "UNTIL", "USE", "VARIABLE", "WAIT", "WITH", "WHEN",
+                 "WHILE", "XNOR", "XOR", "A", "B", "C", "D", "E", "F",
+                 "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q",
+                 "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "BASE_LITERAL",
+                 "BIT_STRING_LITERAL", "BIT_STRING_LITERAL_BINARY", "BIT_STRING_LITERAL_OCTAL",
+                 "BIT_STRING_LITERAL_HEX", "REAL_LITERAL", "BASIC_IDENTIFIER",
+                 "EXTENDED_IDENTIFIER", "LETTER", "COMMENT", "TAB", "SPACE",
+                 "NEWLINE", "CR", "CHARACTER_LITERAL", "STRING_LITERAL",
+                 "OTHER_SPECIAL_CHARACTER", "DOUBLESTAR", "ASSIGN", "LE",
+                 "GE", "ARROW", "NEQ", "VARASGN", "BOX", "DBLQUOTE", "SEMI",
+                 "COMMA", "AMPERSAND", "LPAREN", "RPAREN", "LBRACKET",
+                 "RBRACKET", "COLON", "MUL", "DIV", "PLUS", "MINUS", "LOWERTHAN",
+                 "GREATERTHAN", "EQ", "BAR", "DOT", "BACKSLASH", "EXPONENT",
+                 "HEXDIGIT", "INTEGER", "DIGIT", "BASED_INTEGER", "EXTENDED_DIGIT",
+                 "APOSTROPHE"]
 
     grammarFileName = "Vhdl.g4"
 
@@ -942,5 +941,3 @@ class VhdlLexer(Lexer):
         self._interp = LexerATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._actions = None
         self._predicates = None
-
-

@@ -1,6 +1,6 @@
-from model.HdlElement import HdlElement
-from model.Interface import Interface
-from model.Port import Port
+from model.hdl_element import HdlElement
+from model.interface import Interface
+from model.port import Port
 
 
 class Entity(HdlElement):

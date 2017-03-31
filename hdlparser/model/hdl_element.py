@@ -1,4 +1,3 @@
-
 class HdlElement:
     _TREE_INDENT = "  "
 

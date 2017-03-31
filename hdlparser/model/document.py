@@ -1,5 +1,5 @@
-from model.Entity import Entity
-from model.HdlElement import HdlElement
+from model.entity import Entity
+from model.hdl_element import HdlElement
 
 
 class Document(HdlElement):
@@ -43,7 +43,6 @@ class Document(HdlElement):
                 package_declaration = primary_unit.package_declaration()
 
                 if entity_declaration is not None:
-
                     # entity
                     entity = Entity.from_tree(entity_declaration)
                     document.entities.append(entity)

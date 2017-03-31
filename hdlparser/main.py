@@ -6,7 +6,7 @@ from antlr4 import CommonTokenStream, ParseTreeWalker, FileStream
 from hdlparser.grammar.VhdlLexer import VhdlLexer
 from hdlparser.grammar.VhdlListener import VhdlListener
 from hdlparser.grammar.VhdlParser import VhdlParser
-from model.Document import Document
+from model.document import Document
 
 
 def main():
