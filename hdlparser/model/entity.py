@@ -1,6 +1,7 @@
+from grammar.VhdlParser import VhdlParser
 from model.hdl_element import HdlElement
-from model.interface import Interface
-from model.port import Port
+from model.interface import GenericList
+from model.port import PortList
 
 
 class Entity(HdlElement):
@@ -20,40 +21,10 @@ class Entity(HdlElement):
         port_clause = entity_header.port_clause()
 
         if generic_clause is not None:
-
-            generic_list = generic_clause.generic_list()
-
-            for declaration in generic_list.interface_constant_declaration():
-
-                data_type = declaration.subtype_indication().getText()
-                value = declaration.expression()
-
-                if value is not None:
-                    value = value.getText()
-
-                for identifier in declaration.identifier_list().identifier():
-                    name = identifier.getText()
-                    interface = Interface(name, data_type, value)
-                    entity.generics.append(interface)
+            entity.generics = GenericList.from_tree(generic_clause)
 
         if port_clause is not None:
-
-            port_list = port_clause.port_list()
-            interface_port_list = port_list.interface_port_list()
-
-            for declaration in interface_port_list.interface_port_declaration():
-                direction = declaration.signal_mode().getText()
-                data_type = declaration.subtype_indication().getText()
-                value = declaration.expression()
-
-                if value is not None:
-                    value = value.getText()
-
-                for identifier in declaration.identifier_list().identifier():
-                    name = identifier.getText()
-                    interface = Interface(name, data_type, value)
-                    port = Port(direction, interface)
-                    entity.ports.append(port)
+            entity.ports = PortList.from_tree(port_clause)
 
         return entity
 
