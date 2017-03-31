@@ -50,18 +50,21 @@ class RangeConstraint(HdlElement):
         raise NotImplementedError
 
     def __str__(self):
-        return (
-            "<RangeConstraint "
-            "left_bound={0.left_bound} "
-            "direction={0.direction} "
-            "right_bound={0.right_bound}>".format(self))
+        return "range {0.left_bound} {0.direction} {0.right_bound}".format(self)
 
 
 class IndexConstraint(HdlElement):
-    def __init__(self, index):
-        self.index = index
+    def __init__(self, ranges):
+        self.ranges = ranges
+
+    @classmethod
+    def from_tree(cls, ctx: VhdlParser.Index_constraintContext):
+        for discrete_range in ctx.discrete_range():
+            range_base = discrete_range.range_base()
+            subtype_indication = discrete_range.subtype_indication()
+
+            if range_base is not None:
+
 
     def __str__(self):
-        return (
-            "<IndexConstraint "
-            "upper_bound={0.index}>".format(self))
+        return "({0})".format(self.ranges)

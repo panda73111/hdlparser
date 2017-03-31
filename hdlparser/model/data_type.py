@@ -19,7 +19,8 @@ class DataType(HdlElement):
         return cls(identifier, constraint)
 
     def __str__(self):
-        return (
-            "<DataType "
-            "identifier={0.identifier} "
-            "constraint={0.constraint}>".format(self))
+        constraint_str = ""
+        if self.constraint is not None:
+            constraint_str = " " + str(self.constraint)
+
+        return self.identifier + constraint_str
