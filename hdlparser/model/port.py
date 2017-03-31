@@ -1,17 +1,18 @@
 from enum import Enum
 
 from grammar.VhdlParser import VhdlParser
+from model.data_type import DataType
 from model.hdl_element import HdlElement
 from model.interface import Interface
 
 
 class PortDirection(Enum):
-    IN = 0
-    OUT = 1
-    INOUT = 2
+    IN = "in"
+    OUT = "out"
+    INOUT = "inout"
 
 
-class PortList(HdlElement, list):
+class PortList(list, HdlElement):
     @classmethod
     def from_tree(cls, ctx: VhdlParser.Port_clauseContext):
         port_list = cls()
@@ -20,7 +21,8 @@ class PortList(HdlElement, list):
 
         for declaration in interface_port_list.interface_port_declaration():
             direction = declaration.signal_mode().getText()
-            data_type = declaration.subtype_indication().getText()
+            data_type = declaration.subtype_indication()
+            data_type = DataType.from_tree(data_type)
             value = declaration.expression()
 
             if value is not None:

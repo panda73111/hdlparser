@@ -1,15 +1,17 @@
 from grammar.VhdlParser import VhdlParser
+from model.data_type import DataType
 from model.hdl_element import HdlElement
 
 
-class GenericList(HdlElement, list):
+class GenericList(list, HdlElement):
     @classmethod
     def from_tree(cls, ctx: VhdlParser.Generic_clauseContext):
         generic_list = cls()
 
         for declaration in ctx.generic_list().interface_constant_declaration():
 
-            data_type = declaration.subtype_indication().getText()
+            data_type = declaration.subtype_indication()
+            data_type = DataType.from_tree(data_type)
             value = declaration.expression()
 
             if value is not None:

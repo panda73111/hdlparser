@@ -48,7 +48,7 @@ class Document(HdlElement):
                     entity = Entity.from_tree(entity_declaration)
                     document.entities.append(entity)
 
-            elif secondary_unit is not None:
+            else:
 
                 architecture_body = secondary_unit.architecture_body()
                 package_body = secondary_unit.package_body()
