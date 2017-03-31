@@ -1,3 +1,4 @@
+from grammar.VhdlParser import VhdlParser
 from model.entity import Entity
 from model.hdl_element import HdlElement
 
@@ -10,7 +11,7 @@ class Document(HdlElement):
         self.architectures = []
 
     @classmethod
-    def from_tree(cls, ctx):
+    def from_tree(cls, ctx: VhdlParser.Design_fileContext):
         document = cls()
 
         for design_unit in ctx.design_unit():

@@ -3,7 +3,7 @@ class HdlElement:
 
     @classmethod
     def from_tree(cls, ctx):
-        raise NotImplementedError
+        pass
 
     def tree_string(self, level=0):
         self_str = str(self)[1:-1]

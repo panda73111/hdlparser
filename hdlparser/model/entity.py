@@ -10,7 +10,7 @@ class Entity(HdlElement):
         self.ports = []
 
     @classmethod
-    def from_tree(cls, ctx):
+    def from_tree(cls, ctx: VhdlParser.Entity_declarationContext):
         name = ctx.identifier(0).getText()
         entity = cls(name)
 
